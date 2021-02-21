@@ -16,24 +16,40 @@
         android:padding="30dp"
         >
 
-        <Button
-            android:id="@+id/restart_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="onRestartButtonClick"
-            android:backgroundTint="@color/teal_700"
-            android:text="@string/restart" />
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/restart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="onRestartButtonClick"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/restart" />
+
+            <Chronometer
+                android:id="@+id/time"
+                android:layout_width="101dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/result_screen"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingBottom="150dp"
-            >
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="match_parent"
@@ -53,6 +69,41 @@
                 android:text="@string/win_msg"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="69dp"
+                    android:layout_weight="1"
+                    android:hint="@string/name_msg"
+                    app:boxStrokeColor="#000000"
+                    app:hintTextColor="#000000"
+                    app:startIconTint="#000000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputName"
+                        android:layout_width="278dp"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:onClick="onSaveScore"
+                    android:background="#00FFFFFF"
+                    android:layout_width="63dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="OK" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <TableLayout
@@ -190,6 +241,32 @@
                 android:minHeight="100dp"
                 android:scaleY="3.5" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/errorsLabel"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/errors"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/errorsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

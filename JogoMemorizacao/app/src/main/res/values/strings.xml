@@ -10,4 +10,13 @@
     <string name="btn4">4</string>
     <string name="btn5">5</string>
     <string name="btn6">6</string>
+    <string name="name">Nome</string>
+    <string name="time">Tempo</string>
+    <string name="errors">Falhas:</string>
+    <string name="clean">Limpar</string>
+    <string name="name_msg">Digite o nome do jogador</string>
+    <string name="record">Recorde</string>
+    <string name="list_by_errors">Por erros</string>
+    <string name="list_by_time">Por tempo</string>
+    <string name="errors_count">Quantidade de erros</string>
 </resources>
